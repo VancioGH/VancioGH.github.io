@@ -195,6 +195,67 @@
             width: 16px;
             height: 16px;
         }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            .canvas-wrapper {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            canvas {
+                width: 240px;
+                height: 240px;
+            }
+
+            #debugCanvas {
+                width: 80px;
+                height: 80px;
+            }
+
+            .buttons {
+                width: 100%;
+            }
+
+            button {
+                flex: 1;
+                min-width: 100px;
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .probabilities {
+                max-width: 300px;
+            }
+
+            .result-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            canvas {
+                width: 200px;
+                height: 200px;
+            }
+
+            #debugCanvas {
+                width: 60px;
+                height: 60px;
+            }
+
+            button {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
