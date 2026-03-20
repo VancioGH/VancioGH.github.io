@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Donovan Sanchez</title>
+  <meta name="description" content="Portfolio personal — Desarrollador Web Full Stack">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#inicio" class="logo" data-i18n="hero.name">Donovan Sanchez</a>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="#info" data-i18n="nav.info">Sobre mí</a></li>
+          <li><a href="#estudios" data-i18n="nav.estudios">Estudios</a></li>
+          <li><a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a></li>
+          <li><a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+          <li><a href="#otros" data-i18n="nav.otros">Otros</a></li>
+          <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          <li>
+            <div class="lang-switch">
+              <button class="lang-btn active" data-lang="es">ES</button>
+              <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Inicio -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+        <h1 class="hero-name" data-i18n="hero.name">Donovan Sanchez</h1>
+        <p class="hero-role" data-i18n="hero.role">Programador y Estudiante de IA</p>
+        <p class="hero-description" data-i18n="hero.description">Apasionado de la programación y la IA, con experiencia
+          en motores gráficos y distintas tecnologías.</p>
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn btn-primary" data-i18n="hero.cta">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-secondary" data-i18n="hero.contact">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="info">
+    <div class="container">
+      <h2 class="section-title" data-i18n="info.title">Sobre mí</h2>
+      <div class="info-content">
+        <p data-i18n="info.p1">Soy programador con experiencia en C++, C# y Python, y conocimientos en desarrollo web
+          básico (HTML, CSS, JS).</p>
+        <p data-i18n="info.p2">He trabajado con bases de datos y he creado proyectos en motores gráficos como Unity y
+          Unreal Engine.</p>
+        <p data-i18n="info.p3">Actualmente me estoy formando en inteligencia artificial y me centro en construir
+          soluciones prácticas y funcionales en diferentes entornos tecnológicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estudios -->
+  <section id="estudios">
+    <div class="container">
+      <h2 class="section-title" data-i18n="estudios.title">Estudios</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="estudios.degree1">Curso de Especializacion en Inteligencia Artificial y
+            Big Data</h3>
+          <p class="timeline-subtitle" data-i18n="estudios.school1">Institut Tic de Barcelona</p>
+          <p class="timeline-date" data-i18n="estudios.date1">2025 — Actualmente</p>
+          <p class="timeline-desc" data-i18n="estudios.desc1">Modelos basicos de IA, entrenamiento de redes neuronales y
+            analisis de datos estructurados</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="estudios.degree2">CFGS en Desarrollo de Aplicaciones Multiplataforma
+            (Orientado a Videojuegos)</h3>
+          <p class="timeline-subtitle" data-i18n="estudios.school2">Escola Pia de Granollers</p>
+          <p class="timeline-date" data-i18n="estudios.date2">2022 — 2024</p>
+          <p class="timeline-desc" data-i18n="estudios.desc2">Programacion en C++ y C#, desarrollo de videojuegos,
+            motores graficos, bases de datos y desarrollo web basico</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="estudios.degree3">CFGM en Sistemas Microinformaticos y Redes</h3>
+          <p class="timeline-subtitle" data-i18n="estudios.school3">Escola Palcam</p>
+          <p class="timeline-date" data-i18n="estudios.date3">2020 — 2022</p>
+          <p class="timeline-desc" data-i18n="estudios.desc3">Sistemas operativos, redes, hardware, software, bases de
+            datos y programacion basica</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia">
+    <div class="container">
+      <h2 class="section-title" data-i18n="experiencia.title">Experiencia</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="experiencia.role1">Creacion de Modelos y Animacion 3D</h3>
+          <p class="timeline-subtitle" data-i18n="experiencia.company1">Digital Werkplaats Fryslan (ERASMUS+)</p>
+          <p class="timeline-date" data-i18n="experiencia.date1">01/2024 - 05/2024</p>
+          <p class="timeline-desc" data-i18n="experiencia.desc1">Creacion de modelos 3D y animaciones para un anuncio
+            para una empresa de camperizacion de coches</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="experiencia.role2">Tecnico Informatico</h3>
+          <p class="timeline-subtitle" data-i18n="experiencia.company2">Fundacio Marcet</p>
+          <p class="timeline-date" data-i18n="experiencia.date2">11/2021 - 09/2022</p>
+          <p class="timeline-desc" data-i18n="experiencia.desc2">Soporte tecnico a usuarios, mantenimiento de equipos
+            informaticos y resolucion de problemas tecnicos</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title" data-i18n="experiencia.role3">Becario de Desarrollo</h3>
+          <p class="timeline-subtitle" data-i18n="experiencia.company3">Startup Innovadora</p>
+          <p class="timeline-date" data-i18n="experiencia.date3">2021 — 2022</p>
+          <p class="timeline-desc" data-i18n="experiencia.desc3">Apoyo en el desarrollo de prototipos y MVPs. Primeras
+            experiencias con metodologías ágiles y trabajo en equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <div class="container">
+      <h2 class="section-title" data-i18n="proyectos.title">Proyectos</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="proyectos.filter.all">Todos</button>
+        <button class="filter-btn" data-filter="web" data-i18n="proyectos.filter.web">Web</button>
+        <button class="filter-btn" data-filter="games" data-i18n="proyectos.filter.games">Juegos</button>
+        <button class="filter-btn" data-filter="game-dev" data-i18n="proyectos.filter.game-dev">Game Dev</button>
+        <button class="filter-btn" data-filter="ia" data-i18n="proyectos.filter.ia">IA</button>
+        <button class="filter-btn" data-filter="c++" data-i18n="proyectos.filter.cplusplus">C++</button>
+      </div>
+      <div id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- Otros -->
+  <section id="otros">
+    <div class="container">
+      <h2 class="section-title" data-i18n="otros.title">Otros</h2>
+      <div class="otros-grid">
+        <div class="otros-card">
+          <h3 data-i18n="otros.skills.title">Habilidades técnicas</h3>
+          <ul>
+            <li data-i18n="otros.skills.lenguajes">Lenguajes: C++ (SDL), C#, Python</li>
+            <li data-i18n="otros.skills.web">Web: HTML, CSS, JavaScript, PHP básico</li>
+            <li data-i18n="otros.skills.db">Bases de datos: fundamentos y uso práctico</li>
+            <li data-i18n="otros.skills.motores">Motores gráficos: Unity, Unreal Engine</li>
+            <li data-i18n="otros.skills.ia">Inteligencia artificial: fundamentos y uso práctico</li>
+          </ul>
+        </div>
+        <div class="otros-card">
+          <h3 data-i18n="otros.interests.title">Intereses</h3>
+          <p data-i18n="otros.interests.p">Diseño UX/UI, uso de motores graficos, programacion de videojuegos,
+            procesamiento de audio y multimedia</p>
+        </div>
+        <div class="otros-card">
+          <h3 data-i18n="otros.languages.title">Idiomas</h3>
+          <ul>
+            <li data-i18n="otros.languages.es">Español — Nativo</li>
+            <li data-i18n="otros.languages.en">Inglés — Intermedio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contacto.title">Contacto</h2>
+      <p class="contact-text" data-i18n="contacto.text">¿Tienes un proyecto en mente o quieres colaborar? No dudes en
+        contactarme.</p>
+      <div class="contact-links">
+        <div class="contact-item">
+          <span class="label" data-i18n="contacto.email.label">Email</span>
+          <a href="mailto:tu@email.com">vancio.sanchez@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="label" data-i18n="contacto.github.label">GitHub</span>
+          <a href="https://github.com/username" target="_blank"
+            rel="noopener noreferrer">https://github.com/VancioGH</a>
+        </div>
+        <div class="contact-item">
+          <span class="label" data-i18n="contacto.linkedin.label">LinkedIn</span>
+          <a href="https://linkedin.com/in/username" target="_blank"
+            rel="noopener noreferrer">https://www.linkedin.com/in/donovan-sanchez-b54297188/</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 <span data-i18n="hero.name">Tu Nombre</span>. <span data-i18n="footer.rights">Todos los derechos
+          reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

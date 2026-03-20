@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .project-detail {
+      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 5rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--color-text-light);
+    }
+
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+
+    .back-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .detail-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .detail-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .detail-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-categories .tag {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+    }
+
+    .detail-image {
+      width: 450px;
+      height: 450px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .detail-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .detail-body {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-description h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .detail-description p {
+      color: var(--color-text-light);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .detail-sidebar {
+      margin-top: 2rem;
+    }
+
+    .detail-sidebar h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .tech-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-list li {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      font-weight: 500;
+    }
+
+    .detail-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .detail-actions .btn {
+      flex: 1;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .detail-body {
+        flex-direction: column;
+      }
+
+      .detail-image {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .detail-title {
+        font-size: 1.8rem;
+      }
+
+      .project-detail {
+        padding-top: 96px;
+      }
+    }
+
+    .loading-msg,
+    .error-msg-detail {
+      text-align: center;
+      color: var(--color-text-light);
+      padding: 4rem 0;
+      font-size: 1.1rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo" data-i18n="hero.name">Tu Nombre</a>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="index.html#info" data-i18n="nav.info">Sobre mí</a></li>
+          <li><a href="index.html#estudios" data-i18n="nav.estudios">Estudios</a></li>
+          <li><a href="index.html#experiencia" data-i18n="nav.experiencia">Experiencia</a></li>
+          <li><a href="index.html#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+          <li><a href="index.html#otros" data-i18n="nav.otros">Otros</a></li>
+          <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          <li>
+            <div class="lang-switch">
+              <button class="lang-btn active" data-lang="es">ES</button>
+              <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Detail -->
+  <main class="project-detail">
+    <div class="container">
+      <div id="project-content">
+        <p class="loading-msg" data-i18n-loading>Cargando proyecto...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 <span data-i18n="hero.name">Tu Nombre</span>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    let projectData = null;
+
+    async function loadProjectDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+      const container = document.getElementById("project-content");
+
+      if (!id) {
+        showError(container);
+        return;
+      }
+
+      try {
+        const response = await fetch("data/projects.json");
+        const projects = await response.json();
+        projectData = projects.find(p => p.id === id);
+
+        if (!projectData) {
+          showError(container);
+          return;
+        }
+
+        renderDetail(container);
+      } catch (error) {
+        console.error("Error loading project:", error);
+        showError(container);
+      }
+    }
+
+    function showError(container) {
+      const lang = currentLang || "es";
+      container.innerHTML = `
+        <div class="error-msg-detail">
+          <p>${lang === "es" ? "Proyecto no encontrado." : "Project not found."}</p>
+          <br>
+          <a href="index.html#proyectos" class="btn btn-primary">
+            ${lang === "es" ? "Volver a proyectos" : "Back to projects"}
+          </a>
+        </div>
+      `;
+    }
+
+    function renderDetail(container) {
+      const lang = currentLang || "es";
+      const p = projectData;
+
+      document.title = `${p.title[lang]} — Portfolio`;
+
+      const descLabel = lang === "es" ? "Descripción del proyecto" : "Project description";
+      const techLabel = lang === "es" ? "Tecnologías" : "Technologies";
+      const codeLabel = translations[lang]["proyectos.code"];
+      const viewProjectLabel = translations[lang]["proyectos.view"];
+      const backLabel = lang === "es" ? "Volver a proyectos" : "Back to projects";
+
+      let actionsHTML = "";
+      if (p.github || p.link) {
+        actionsHTML = `<div class="detail-actions">`;
+        if (p.hasProject && p.link) {
+          actionsHTML += `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${viewProjectLabel}</a>`;
+        }
+        if (p.github) {
+          actionsHTML += `<a href="${p.github}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">${codeLabel}</a>`;
+        }
+        actionsHTML += `</div>`;
+      }
+
+      container.innerHTML = `
+        <a href="index.html#proyectos" class="back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          ${backLabel}
+        </a>
+
+        <div class="detail-header">
+          <h1 class="detail-title">${p.title[lang]}</h1>
+          <div class="detail-categories">
+            ${p.categories.map(cat => `<span class="tag">${cat}</span>`).join("")}
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <div class="detail-image">
+            <img src="${p.image}" alt="${p.title[lang]}">
+          </div>
+
+          <div class="detail-description">
+            <h2>${descLabel}</h2>
+            <p>${p.details ? p.details[lang] : p.description[lang]}</p>
+
+            ${p.technologies ? `
+            <aside class="detail-sidebar">
+              <h3>${techLabel}</h3>
+              <ul class="tech-list">
+                ${p.technologies.map(t => `<li>${t}</li>`).join("")}
+              </ul>
+            </aside>
+            ` : ""}
+
+            ${actionsHTML}
+          </div>
+        </div>
+      `;
+    }
+
+    // Re-render on language change
+    const originalSetLanguage = setLanguage;
+    setLanguage = function(lang) {
+      originalSetLanguage(lang);
+      if (projectData) {
+        renderDetail(document.getElementById("project-content"));
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initI18n();
+      loadProjectDetail();
+
+      // Mobile menu
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("open");
+          toggle.classList.toggle("open");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "es": "Gauntlet: Motor de Juego 2D",
+      "en": "Gauntlet: 2D Game Engine"
+    },
+    "description": {
+      "es": "Recreación del clásico Gauntlet con un motor propio en C++ y SDL2. Enfocado en arquitectura modular y gestión de recursos.",
+      "en": "Recreation of the classic Gauntlet using a custom C++ and SDL2 engine. Focused on modular architecture and resource management."
+    },
+    "details": {
+      "es": "Este proyecto va más allá de un simple clon de juego; es un ejercicio de arquitectura de software. El núcleo del aprendizaje fue la implementación de un motor 2D modular desde cero. Se diseñó un sistema de 'Managers' desacoplados para gestionar subsistemas críticos de forma independiente: Input, Audio, Video, Texturas y Colisiones. Esto permite que cada componente (cámara, entidades, físicas) funcione de manera aislada y reutilizable. Incluye gestión de estados (Escenas), herencia de clases para entidades (Enemigos, Jugador, Objetos) y lectura de datos externos (XML/Mapas).",
+      "en": "This project goes beyond a simple game clone; it is a software architecture exercise. The core learning outcome was implementing a modular 2D engine from scratch. A decoupled 'Managers' system was designed to handle critical subsystems independently: Input, Audio, Video, Textures, and Collisions. This allows each component (camera, entities, physics) to work in isolation and be reusable. It includes state management (Scenes), class inheritance for entities (Enemies, Player, Objects), and external data parsing (XML/Maps)."
+    },
+    "image": "img/proj1.gif",
+    "link": "#",
+    "github": "https://github.com/VancioGH/Gauntlet",
+    "hasProject": false,
+    "categories": [
+      "games",
+      "c++"
+    ],
+    "technologies": [
+      "C++",
+      "SDL2",
+      "TinyXML2",
+      "OOP",
+      "Visual Studio"
+    ]
+  },
+  {
+    "id": "2",
+    "title": {
+      "es": "Aguacate Pium Pium",
+      "en": "Aguacate Pium Pium"
+    },
+    "description": {
+      "es": "Videojuego de disparos (shmup) desarrollado íntegramente con JavaScript vanilla.",
+      "en": "Space shooter game (shmup) developed entirely with vanilla JavaScript."
+    },
+    "details": {
+      "es": "Proyecto académico centrado en el desarrollo de mecánicas de juego. Implementa un sistema de 'game loop' para la gestión de frames por segundo (FPS), optimización de memoria mediante la liberación de objetos obsoletos y un sistema dinámico de gestión de recursos y colisiones.",
+      "en": "Academic project focused on game mechanics development. It implements a game loop system for frames per second (FPS) management, memory optimization by clearing obsolete objects, and a dynamic resource and collision management system."
+    },
+    "image": "img/proj2.gif",
+    "link": "https://jdonovand5.itch.io/aguacate-pium-pium",
+    "github": "https://github.com/tu-usuario/aguacate-pium",
+    "hasProject": true,
+    "categories": [
+      "games",
+      "web"
+    ],
+    "technologies": [
+      "JavaScript (ES6+)",
+      "HTML5 Canvas",
+      "CSS3",
+      "Git"
+    ]
+  },
+  {
+    "id": "3",
+    "title": {
+      "es": "Orcas Mazorcas",
+      "en": "Orcas Mazorcas"
+    },
+    "description": {
+      "es": "Recreación del juego Maziacs con generación procedural de laberintos y sistema de puntuaciones. Enfocado en POO y gestión de memoria en C++.",
+      "en": "Maziacs-inspired game featuring procedural maze generation and score system. Focused on OOP and memory management in C++."
+    },
+    "details": {
+      "es": "Este proyecto es un videojuego inspirado en el clásico Maziacs, desarrollado para profundizar en conceptos fundamentales de C++. El núcleo del juego destaca por la generación procedural de laberintos, asegurando una experiencia única en cada partida. Técnicamente, el desarrollo se centró en la Programación Orientada a Objetos (creación de clases y objetos), el uso avanzado de punteros para la gestión de memoria y la implementación de la librería gráfica TinyPTC. Además, incorpora un sistema de persistencia de datos mediante lectura y escritura de archivos de texto para gestionar las puntuaciones de los jugadores.",
+      "en": "This project is a video game inspired by the classic Maziacs, developed to deepen fundamental C++ concepts. The core gameplay features procedural maze generation, ensuring a unique experience for every run. Technically, development focused on Object-Oriented Programming (class and object creation), advanced pointer usage for memory management, and the implementation of the TinyPTC graphics library. It also incorporates a data persistence system using text file I/O to manage and save player scores."
+    },
+    "image": "img/proj3.gif",
+    "link": "#",
+    "github": "https://github.com/VancioGH/Orcas-Mazorcas",
+    "hasProject": false,
+    "categories": [
+      "game-dev",
+      "desktop",
+      "c++"
+    ],
+    "technologies": [
+      "C++",
+      "TinyPTC",
+      "Procedural Generation",
+      "File I/O",
+      "OOP",
+      "Pointers"
+    ]
+  },
+  {
+    "id": "4",
+    "title": {
+      "es": "Reconocimiento de Dígitos con Redes Neuronales",
+      "en": "Handwritten Digit Recognition with Neural Networks"
+    },
+    "description": {
+      "es": "Aplicación web interactiva que permite dibujar un número a mano y obtener una predicción en tiempo real mediante una red neuronal entrenada con MNIST.",
+      "en": "Interactive web application that allows users to draw a handwritten number and receive a real-time prediction using a neural network trained on MNIST."
+    },
+    "details": {
+      "es": "Proyecto de inteligencia artificial que implementa una red neuronal multicapa entrenada con el dataset MNIST para el reconocimiento de dígitos escritos a mano. La aplicación incluye un canvas interactivo de 28x28 píxeles donde el usuario puede dibujar un número, procesamiento de la imagen para normalización y escalado, y predicción en tiempo real mostrando probabilidades por clase (0–9). \n\n**Cómo funciona en la web:** El modelo se entrenó en Python utilizando NumPy puro, implementando forward y backpropagation manualmente para entender los fundamentos. Una vez entrenado, solo se exportaron los pesos a un archivo JSON. Para desplegarlo en el navegador sin necesidad de un servidor, se utilizó **Pyodide** (Python compilado a WebAssembly), permitiendo ejecutar el código de inferencia de Python directamente en el navegador del cliente. Los pesos se cargan con JavaScript y se pasan a Python, donde NumPy realiza los cálculos de la red neuronal.",
+      "en": "Artificial intelligence project implementing a multilayer neural network trained on the MNIST dataset for handwritten digit recognition. The application includes an interactive 28x28 pixel canvas where users can draw a number, image preprocessing for normalization and scaling, and real-time prediction displaying class probabilities (0–9). \n\n**How it works on the web:** The model was trained in Python using pure NumPy, implementing forward and backpropagation manually to understand the fundamentals. Once trained, only the weights were exported to a JSON file. To deploy it on the web without a server, **Pyodide** (Python compiled to WebAssembly) was used, allowing Python inference code to run directly in the client's browser. Weights are loaded with JavaScript and passed to Python, where NumPy performs the neural network calculations."
+    },
+    "image": "img/proj4.gif",
+    "link": "./Projects/proj4/index.html",
+    "github": "https://github.com/tuusuario/mnist-web-app",
+    "hasProject": true,
+    "categories": [
+      "web",
+      "ia",
+      "machine-learning"
+    ],
+    "technologies": [
+      "Python",
+      "NumPy",
+      "Pyodide",
+      "JavaScript",
+      "HTML5 Canvas",
+      "WebAssembly"
+    ]
+  }
+]
